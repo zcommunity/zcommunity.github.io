@@ -220,14 +220,30 @@
             box-shadow: 0 0 10px var(--accent-glow);
         }
 
-        .client-tag {
-            background: rgba(255, 255, 255, 0.1);
-            color: #ffffff;
-            font-size: 0.65rem;
+        /* Tag estilo Vape */
+        .vape-tag {
+            font-family: Arial, Impact, sans-serif;
             font-weight: 900;
+            font-size: 0.75rem;
+            color: #ffffff;
+            letter-spacing: -0.5px;
             padding: 2px 6px;
+            background: rgba(255, 255, 255, 0.12);
+            border: 1px solid rgba(255, 255, 255, 0.3);
             border-radius: 6px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            text-transform: uppercase;
+        }
+
+        /* Tag estilo Slinky (Naranja) */
+        .slinky-tag {
+            font-weight: 900;
+            font-size: 0.7rem;
+            color: #ff9d42;
+            background: rgba(255, 107, 0, 0.15);
+            border: 1px solid #ff6b00;
+            box-shadow: 0 0 8px rgba(255, 107, 0, 0.4);
+            padding: 2px 7px;
+            border-radius: 6px;
             text-transform: uppercase;
         }
 
@@ -288,13 +304,13 @@
             </a>
         </div>
 
-        <!-- Tarjeta Ghost Clients (a la derecha) -->
+        <!-- Tarjeta Ghost Clients -->
         <div id="ghost-clients" class="section-card">
             <div class="status-badge">
                 <span class="status-dot"></span>
-                <span class="client-tag">Vape</span>
+                <span class="vape-tag">VAPE</span>
                 GHOST CHEATING
-                <span class="client-tag">Slinky</span>
+                <span class="slinky-tag">SLINKY</span>
             </div>
             <h2 class="ghost-title">Ghost Clients</h2>
             <p class="ghost-text">
