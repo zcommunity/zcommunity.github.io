@@ -9,6 +9,7 @@
         :root {
             --accent-purple: #9333ea;
             --accent-glow: #a855f7;
+            --accent-cyan: #00f0ff;
             --card-bg: #0d0d12;
             --text-color: #ffffff;
             --text-muted: #a1a1aa;
@@ -107,14 +108,25 @@
             letter-spacing: 3px;
             text-transform: uppercase;
             text-shadow: 0 0 15px rgba(168, 85, 247, 0.8);
-            margin-bottom: 12px;
+            margin-bottom: 15px;
+        }
+
+        /* Tarjeta de bienvenida destacada */
+        .welcome-card {
+            background: rgba(0, 240, 255, 0.05);
+            border: 1px solid rgba(0, 240, 255, 0.4);
+            border-radius: 16px;
+            padding: 16px 20px;
+            box-shadow: 0 0 15px rgba(0, 240, 255, 0.15);
+            max-width: 600px;
+            margin: 0 auto;
         }
 
         .welcome-text {
-            color: var(--text-muted);
-            font-size: 1rem;
-            line-height: 1.6;
-            margin-top: 10px;
+            color: #e0f8ff;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            font-weight: 500;
         }
 
         /* Contenedor principal estilizado */
@@ -192,7 +204,7 @@
             text-transform: uppercase;
         }
 
-        .ghost-title {
+        .section-title {
             font-size: 2rem;
             font-weight: 900;
             text-transform: uppercase;
@@ -203,7 +215,7 @@
             letter-spacing: 1px;
         }
 
-        .ghost-text {
+        .section-text {
             color: var(--text-muted);
             font-size: 0.95rem;
             line-height: 1.6;
@@ -344,16 +356,19 @@
     <nav>
         <a href="#top">Inicio</a>
         <a href="#ghost-clients">Ghost Clients</a>
-        <a href="#faq">Preguntas Frecuentes</a>
+        <a href="#blatant-clients">Blatant Clients</a>
         <a href="#discord">Discord</a>
+        <a href="#faq">FAQ</a>
     </nav>
 
     <header id="top">
         <img src="logo.png?v=1" alt="Z Community Logo" class="logo">
         <h1>Z COMMUNITY</h1>
-        <p class="welcome-text">
-            Diseñamos este sitio para reunirlo todo en un solo lugar: desde los mejores clientes y configuraciones optimizadas hasta mods de rendimiento y herramientas para mejorar tu experiencia de juego. Échale un vistazo a todo lo que tenemos preparado y pásate por nuestro servidor de Discord para estar al día de las últimas actualizaciones, descargar los archivos y resolver cualquier duda con la comunidad.
-        </p>
+        <div class="welcome-card">
+            <p class="welcome-text">
+                Reunimos todo en un solo lugar: los mejores clientes, configuraciones optimizadas y mods de rendimiento. Échale un vistazo y pásate por nuestro Discord para descargar los archivos y estar al día.
+            </p>
+        </div>
     </header>
 
     <div class="main-content">
@@ -365,25 +380,18 @@
                 GHOST CHEATING
                 <span class="slinky-tag">SLINKY</span>
             </div>
-            <h2 class="ghost-title">Ghost Clients</h2>
-            <p class="ghost-text">
+            <h2 class="section-title">Ghost Clients</h2>
+            <p class="section-text">
                 Los mejores ghost clients de Minecraft te los tenemos aquí. Configuraciones totalmente optimizadas, indetectables y listas para potenciar tu rendimiento al máximo.
             </p>
         </div>
 
-        <!-- 2. Sección Preguntas Frecuentes -->
-        <div id="faq" class="section-card faq-card">
-            <h2 class="faq-title">Preguntas Frecuentes</h2>
-            <div class="faq-item">
-                <h3>¿Qué ofrecemos en Z COMMUNITY?</h3>
-                <ul class="faq-list">
-                    <li><span class="faq-bullet">◆</span> Clientes optimizados para PvP y Ghost Cheating</li>
-                    <li><span class="faq-bullet">◆</span> Auto Clickers indetectables y configuraciones avanzadas</li>
-                    <li><span class="faq-bullet">◆</span> Configs personalizadas para máxima precisión</li>
-                    <li><span class="faq-bullet">◆</span> Mods de rendimiento para aumentar FPS y reducir lag</li>
-                    <li><span class="faq-bullet">◆</span> Soporte técnico directo e integración con nuestra comunidad</li>
-                </ul>
-            </div>
+        <!-- 2. Sección Blatant Clients -->
+        <div id="blatant-clients" class="section-card">
+            <h2 class="section-title">Blatant Clients</h2>
+            <p class="section-text">
+                Encuentra las mejores opciones de clientes blatant para dominar sin restricciones. Configuraciones ajustadas para maximizar funciones, estabilidad y respuesta en el juego.
+            </p>
         </div>
 
         <!-- 3. Tarjeta de Discord -->
@@ -397,6 +405,21 @@
                 </svg>
                 Entrar al Discord
             </a>
+        </div>
+
+        <!-- 4. Sección Preguntas Frecuentes (Al final del todo) -->
+        <div id="faq" class="section-card faq-card">
+            <h2 class="faq-title">Preguntas Frecuentes</h2>
+            <div class="faq-item">
+                <h3>¿Qué ofrecemos en Z COMMUNITY?</h3>
+                <ul class="faq-list">
+                    <li><span class="faq-bullet">◆</span> Clientes optimizados para PvP y Ghost Cheating</li>
+                    <li><span class="faq-bullet">◆</span> Auto Clickers indetectables y configuraciones avanzadas</li>
+                    <li><span class="faq-bullet">◆</span> Configs personalizadas para máxima precisión</li>
+                    <li><span class="faq-bullet">◆</span> Mods de rendimiento para aumentar FPS y reducir lag</li>
+                    <li><span class="faq-bullet">◆</span> Soporte técnico directo e integración con nuestra comunidad</li>
+                </ul>
+            </div>
         </div>
     </div>
 
@@ -456,4 +479,4 @@
     </script>
 
 </body>
-</html>
+                </html>
