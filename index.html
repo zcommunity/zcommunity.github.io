@@ -108,40 +108,160 @@
             text-shadow: 0 0 15px rgba(168, 85, 247, 0.8);
         }
 
-        /* Contenedor flexible para poner las tarjetas lado a lado */
-        .cards-container {
+        /* Contenedor principal estilizado */
+        .main-content {
             display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: stretch;
+            flex-direction: column;
+            align-items: center;
             gap: 30px;
-            max-width: 900px;
+            max-width: 800px;
             width: 100%;
             z-index: 2;
             margin-bottom: 40px;
         }
 
-        /* Tarjetas y Secciones */
-        .discord-card, .section-card {
+        .section-card {
             background-color: var(--card-bg);
             border: 1px solid rgba(168, 85, 247, 0.3);
             border-radius: 20px;
             padding: 28px 24px;
-            flex: 1 1 380px;
-            max-width: 420px;
             width: 100%;
             text-align: center;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 20px rgba(147, 51, 234, 0.2);
             backdrop-filter: blur(10px);
+        }
+
+        /* Indicador superior Ghost Cheating */
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: rgba(168, 85, 247, 0.15);
+            border: 1px solid var(--accent-glow);
+            color: #d8b4fe;
+            font-size: 0.8rem;
+            font-weight: 800;
+            padding: 8px 16px;
+            border-radius: 20px;
+            letter-spacing: 1.2px;
+            margin-bottom: 18px;
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            background-color: var(--accent-glow);
+            border-radius: 50%;
+            box-shadow: 0 0 10px var(--accent-glow);
+        }
+
+        /* Tag de VAPE igual a la imagen enviada */
+        .vape-logo-badge {
+            background: #000000;
+            color: #ffffff;
+            font-family: Impact, 'Arial Black', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 900;
+            padding: 2px 8px;
+            border-radius: 4px;
+            letter-spacing: -0.5px;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            display: inline-block;
+            line-height: 1;
+        }
+
+        /* Tag de SLINKY en Naranja */
+        .slinky-tag {
+            font-weight: 900;
+            font-size: 0.75rem;
+            color: #ff9d42;
+            background: rgba(255, 107, 0, 0.15);
+            border: 1px solid #ff6b00;
+            box-shadow: 0 0 8px rgba(255, 107, 0, 0.4);
+            padding: 3px 8px;
+            border-radius: 6px;
+            text-transform: uppercase;
+        }
+
+        .ghost-title {
+            font-size: 2rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            background: linear-gradient(135deg, #ffffff 0%, #a855f7 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+
+        .ghost-text {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Estilos de la sección FAQ */
+        .faq-card {
+            text-align: left;
+        }
+
+        .faq-title {
+            font-size: 1.6rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            color: #ffffff;
+            margin-bottom: 20px;
+            text-align: center;
+            border-bottom: 1px solid rgba(168, 85, 247, 0.3);
+            padding-bottom: 10px;
+        }
+
+        .faq-item h3 {
+            font-size: 1.15rem;
+            color: var(--accent-glow);
+            margin-bottom: 12px;
+            font-weight: 800;
+        }
+
+        .faq-list {
+            list-style: none;
+            padding: 0;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            gap: 10px;
+        }
+
+        .faq-list li {
+            color: var(--text-color);
+            font-size: 0.95rem;
+            display: flex;
             align-items: center;
+            gap: 10px;
+            background: rgba(255, 255, 255, 0.03);
+            padding: 8px 12px;
+            border-radius: 8px;
+            border: 1px solid rgba(168, 85, 247, 0.15);
+        }
+
+        .faq-bullet {
+            color: var(--accent-glow);
+            font-size: 1rem;
+        }
+
+        /* Tarjeta de Discord al final */
+        .discord-card {
+            background-color: var(--card-bg);
+            border: 1px solid rgba(168, 85, 247, 0.3);
+            border-radius: 20px;
+            padding: 28px 24px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 20px rgba(147, 51, 234, 0.2);
+            backdrop-filter: blur(10px);
         }
 
         .discord-card h2 {
-            font-size: 1.5rem;
+            font-size: 1.6rem;
             font-weight: 800;
             margin-bottom: 10px;
             color: #ffffff;
@@ -172,6 +292,8 @@
             justify-content: center;
             gap: 10px;
             width: 100%;
+            max-width: 320px;
+            margin: 0 auto;
             background-color: var(--accent-purple);
             color: #ffffff;
             padding: 14px 24px;
@@ -196,75 +318,6 @@
             fill: #ffffff;
         }
 
-        /* Sección Ghost Clients */
-        .status-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            background: rgba(168, 85, 247, 0.15);
-            border: 1px solid var(--accent-glow);
-            color: #d8b4fe;
-            font-size: 0.75rem;
-            font-weight: 800;
-            padding: 6px 14px;
-            border-radius: 20px;
-            letter-spacing: 1.2px;
-            margin-bottom: 18px;
-        }
-
-        .status-dot {
-            width: 8px;
-            height: 8px;
-            background-color: var(--accent-glow);
-            border-radius: 50%;
-            box-shadow: 0 0 10px var(--accent-glow);
-        }
-
-        /* Tag estilo Vape */
-        .vape-tag {
-            font-family: Arial, Impact, sans-serif;
-            font-weight: 900;
-            font-size: 0.75rem;
-            color: #ffffff;
-            letter-spacing: -0.5px;
-            padding: 2px 6px;
-            background: rgba(255, 255, 255, 0.12);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            border-radius: 6px;
-            text-transform: uppercase;
-        }
-
-        /* Tag estilo Slinky (Naranja) */
-        .slinky-tag {
-            font-weight: 900;
-            font-size: 0.7rem;
-            color: #ff9d42;
-            background: rgba(255, 107, 0, 0.15);
-            border: 1px solid #ff6b00;
-            box-shadow: 0 0 8px rgba(255, 107, 0, 0.4);
-            padding: 2px 7px;
-            border-radius: 6px;
-            text-transform: uppercase;
-        }
-
-        .ghost-title {
-            font-size: 2rem;
-            font-weight: 900;
-            text-transform: uppercase;
-            background: linear-gradient(135deg, #ffffff 0%, #a855f7 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 15px;
-            letter-spacing: 1px;
-        }
-
-        .ghost-text {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            line-height: 1.6;
-            text-align: center;
-        }
-
         footer {
             margin-top: 30px;
             font-size: 0.8rem;
@@ -281,8 +334,9 @@
 
     <nav>
         <a href="#top">Inicio</a>
-        <a href="https://discord.gg/Qf5YpZyzAb" target="_blank">Discord</a>
         <a href="#ghost-clients">Ghost Clients</a>
+        <a href="#faq">Preguntas Frecuentes</a>
+        <a href="#discord">Discord</a>
     </nav>
 
     <header id="top">
@@ -290,25 +344,12 @@
         <h1>Z COMMUNITY</h1>
     </header>
 
-    <div class="cards-container">
-        <!-- Tarjeta de Discord -->
-        <div id="discord" class="discord-card">
-            <span class="member-badge">+200 Miembros</span>
-            <h2>Servidor Oficial</h2>
-            <p>Accede a la comunidad para encontrar clientes, configuraciones optimizadas, actualizaciones y soporte técnico directo.</p>
-            <a href="https://discord.gg/Qf5YpZyzAb" target="_blank" class="btn-discord">
-                <svg class="discord-icon" viewBox="0 0 24 24">
-                    <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994.021-.041.001-.09-.041-.106a13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.061 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.028zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/>
-                </svg>
-                Entrar al Discord
-            </a>
-        </div>
-
-        <!-- Tarjeta Ghost Clients -->
+    <div class="main-content">
+        <!-- 1. Sección Ghost Clients -->
         <div id="ghost-clients" class="section-card">
             <div class="status-badge">
                 <span class="status-dot"></span>
-                <span class="vape-tag">VAPE</span>
+                <span class="vape-logo-badge">VAPE</span>
                 GHOST CHEATING
                 <span class="slinky-tag">SLINKY</span>
             </div>
@@ -316,6 +357,34 @@
             <p class="ghost-text">
                 Los mejores ghost clients de Minecraft te los tenemos aquí. Configuraciones totalmente optimizadas, indetectables y listas para potenciar tu rendimiento al máximo.
             </p>
+        </div>
+
+        <!-- 2. Sección Preguntas Frecuentes -->
+        <div id="faq" class="section-card faq-card">
+            <h2 class="faq-title">Preguntas Frecuentes</h2>
+            <div class="faq-item">
+                <h3>¿Qué ofrecemos en Z COMMUNITY?</h3>
+                <ul class="faq-list">
+                    <li><span class="faq-bullet">◆</span> Clientes optimizados para PvP y Ghost Cheating</li>
+                    <li><span class="faq-bullet">◆</span> Auto Clickers indetectables y configuraciones avanzadas</li>
+                    <li><span class="faq-bullet">◆</span> Configs personalizadas para máxima precisión</li>
+                    <li><span class="faq-bullet">◆</span> Mods de rendimiento para aumentar FPS y reducir lag</li>
+                    <li><span class="faq-bullet">◆</span> Soporte técnico directo e integración con nuestra comunidad</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 3. Tarjeta de Discord (Ubicada al final) -->
+        <div id="discord" class="discord-card">
+            <span class="member-badge">+200 Miembros</span>
+            <h2>Servidor Oficial de Discord</h2>
+            <p>Únete a nuestra comunidad oficial para acceder a todas las descargas, guías de instalación y soporte personalizado.</p>
+            <a href="https://discord.gg/Qf5YpZyzAb" target="_blank" class="btn-discord">
+                <svg class="discord-icon" viewBox="0 0 24 24">
+                    <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994.021-.041.001-.09-.041-.106a13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.061 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.028zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/>
+                </svg>
+                Entrar al Discord
+            </a>
         </div>
     </div>
 
