@@ -81,6 +81,7 @@
             margin-bottom: 30px;
             z-index: 2;
             margin-top: 20px;
+            max-width: 700px;
         }
 
         .logo {
@@ -106,6 +107,14 @@
             letter-spacing: 3px;
             text-transform: uppercase;
             text-shadow: 0 0 15px rgba(168, 85, 247, 0.8);
+            margin-bottom: 12px;
+        }
+
+        .welcome-text {
+            color: var(--text-muted);
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-top: 10px;
         }
 
         /* Contenedor principal estilizado */
@@ -155,7 +164,7 @@
             box-shadow: 0 0 10px var(--accent-glow);
         }
 
-        /* Tag de VAPE igual a la imagen enviada */
+        /* Tag de VAPE */
         .vape-logo-badge {
             background: #000000;
             color: #ffffff;
@@ -170,7 +179,7 @@
             line-height: 1;
         }
 
-        /* Tag de SLINKY en Naranja */
+        /* Tag de SLINKY */
         .slinky-tag {
             font-weight: 900;
             font-size: 0.75rem;
@@ -248,7 +257,7 @@
             font-size: 1rem;
         }
 
-        /* Tarjeta de Discord al final */
+        /* Tarjeta de Discord */
         .discord-card {
             background-color: var(--card-bg);
             border: 1px solid rgba(168, 85, 247, 0.3);
@@ -342,6 +351,9 @@
     <header id="top">
         <img src="logo.png?v=1" alt="Z Community Logo" class="logo">
         <h1>Z COMMUNITY</h1>
+        <p class="welcome-text">
+            Diseñamos este sitio para reunirlo todo en un solo lugar: desde los mejores clientes y configuraciones optimizadas hasta mods de rendimiento y herramientas para mejorar tu experiencia de juego. Échale un vistazo a todo lo que tenemos preparado y pásate por nuestro servidor de Discord para estar al día de las últimas actualizaciones, descargar los archivos y resolver cualquier duda con la comunidad.
+        </p>
     </header>
 
     <div class="main-content">
@@ -374,7 +386,7 @@
             </div>
         </div>
 
-        <!-- 3. Tarjeta de Discord (Ubicada al final) -->
+        <!-- 3. Tarjeta de Discord -->
         <div id="discord" class="discord-card">
             <span class="member-badge">+200 Miembros</span>
             <h2>Servidor Oficial de Discord</h2>
