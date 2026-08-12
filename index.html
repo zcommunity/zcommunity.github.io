@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Z COMMUNITY | The Best Server</title>
-    <!-- Etiqueta del Favicon para mostrar el logo en la pestaña -->
     <link rel="icon" type="image/png" href="logo.png?v=1">
     <style>
         :root {
@@ -13,6 +12,10 @@
             --card-bg: #0d0d12;
             --text-color: #ffffff;
             --text-muted: #a1a1aa;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         * {
@@ -28,15 +31,14 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
             min-height: 100vh;
-            padding: 20px;
+            padding: 80px 20px 40px 20px;
             overflow-x: hidden;
             position: relative;
         }
 
         #particles-canvas {
-            position: absolute;
+            position: fixed;
             top: 0;
             left: 0;
             width: 100%;
@@ -45,10 +47,40 @@
             pointer-events: none;
         }
 
+        /* Barra de navegación superior */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(13, 13, 18, 0.85);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(168, 85, 247, 0.2);
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 12px 0;
+            z-index: 100;
+        }
+
+        nav a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 700;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--accent-glow);
+        }
+
+        /* Encabezado */
         header {
             text-align: center;
             margin-bottom: 30px;
             z-index: 2;
+            margin-top: 20px;
         }
 
         .logo {
@@ -76,7 +108,8 @@
             text-shadow: 0 0 15px rgba(168, 85, 247, 0.8);
         }
 
-        .discord-card {
+        /* Tarjetas y Secciones */
+        .discord-card, .section-card {
             background-color: var(--card-bg);
             border: 1px solid rgba(168, 85, 247, 0.3);
             border-radius: 20px;
@@ -87,6 +120,7 @@
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 20px rgba(147, 51, 234, 0.2);
             z-index: 2;
             backdrop-filter: blur(10px);
+            margin-bottom: 50px;
         }
 
         .discord-card h2 {
@@ -145,8 +179,50 @@
             fill: #ffffff;
         }
 
+        /* Sección Ghost Clients */
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(34, 197, 94, 0.1);
+            border: 1px solid #22c55e;
+            color: #4ade80;
+            font-size: 0.75rem;
+            font-weight: 800;
+            padding: 6px 14px;
+            border-radius: 20px;
+            letter-spacing: 1.5px;
+            margin-bottom: 18px;
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            background-color: #22c55e;
+            border-radius: 50%;
+            box-shadow: 0 0 8px #22c55e;
+        }
+
+        .ghost-title {
+            font-size: 2rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            background: linear-gradient(135deg, #ffffff 0%, #a855f7 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+
+        .ghost-text {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            text-align: center;
+        }
+
         footer {
-            margin-top: 50px;
+            margin-top: 30px;
             font-size: 0.8rem;
             color: #555;
             letter-spacing: 1px;
@@ -159,12 +235,18 @@
 
     <canvas id="particles-canvas"></canvas>
 
-    <header>
+    <nav>
+        <a href="#top">Inicio</a>
+        <a href="#discord">Discord</a>
+        <a href="#ghost-clients">Ghost Clients</a>
+    </nav>
+
+    <header id="top">
         <img src="logo.png?v=1" alt="Z Community Logo" class="logo">
         <h1>Z COMMUNITY</h1>
     </header>
 
-    <div class="discord-card">
+    <div id="discord" class="discord-card">
         <span class="member-badge">+200 Miembros</span>
         <h2>Servidor Oficial</h2>
         <p>Accede a la comunidad para encontrar clientes, configuraciones optimizadas, actualizaciones y soporte técnico directo.</p>
@@ -174,6 +256,17 @@
             </svg>
             Entrar al Discord
         </a>
+    </div>
+
+    <div id="ghost-clients" class="section-card">
+        <div class="status-badge">
+            <span class="status-dot"></span>
+            STATUS: UNDETECTED 2026
+        </div>
+        <h2 class="ghost-title">Ghost Clients</h2>
+        <p class="ghost-text">
+            Recopilación de configuraciones optimizadas y clientes livianos orientados al rendimiento en PvP. Todo probado para mantener la mayor estabilidad y fluidez posible según la versión de juego.
+        </p>
     </div>
 
     <footer>
